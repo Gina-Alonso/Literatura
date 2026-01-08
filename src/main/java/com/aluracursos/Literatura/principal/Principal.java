@@ -147,14 +147,35 @@ public class Principal {
         DoubleSummaryStatistics estadisticas = librosCRegistrados.stream()
                 .filter(l->l.getNumeroDescargas()>0.0)
                 .collect(Collectors.summarizingDouble(LibrosC::getNumeroDescargas));
+        Optional<LibrosC> librosMasDescargado = librosCRegistrados.stream()
+                .filter(l->l.getNumeroDescargas()>0.0)
+                .max(Comparator.comparingDouble(LibrosC::getNumeroDescargas));
+        Optional<LibrosC> libroMenosDescargado = librosCRegistrados.stream()
+                .filter(l->l.getNumeroDescargas()>0.0)
+                .min(Comparator.comparingDouble(LibrosC::getNumeroDescargas));
         System.out.println("......................Estadisticas......................");
-        System.out.printf("► Media de descargas %.2f \n► Elementos Evaluados %d\n", estadisticas.getAverage(), estadisticas.getCount());
+        System.out.printf("► Media de descargas %.2f \n► Total de Descargas %.2f\n", estadisticas.getAverage(), estadisticas.getSum());
+        System.out.printf("► Elementos Evaluados %d\nTotal de libros registrados %d", estadisticas.getCount(), librosCRegistrados.size());
+        if (librosMasDescargado.isPresent()){
+            System.out.printf("\n► Libro mas descargado: %s   %.2f descargas", librosMasDescargado.get().getTituloLibro(), librosMasDescargado.get().getNumeroDescargas());
+        }else {
+            System.out.println("No se encontro ningun libro");
+        }
+        if (libroMenosDescargado.isPresent()){
+            System.out.printf("\n► Libro menos descargado: %s   %.2f descargas\n", libroMenosDescargado.get().getTituloLibro(), libroMenosDescargado.get().getNumeroDescargas());
+        }else {
+            System.out.println("No se encontro ningun libro");
+        }
+
 
     }
     private void top5MasDescargados() {
         librosCRegistrados = libroRepository.findTop5ByOrderByNumeroDescargasDesc();
         System.out.println("......................Top5 mas Descargados......................");
-        librosCRegistrados.forEach(l-> System.out.println("► "+l.toString()));
+        for (int i = 0; i < librosCRegistrados.size(); i++) {
+            LibrosC libro = librosCRegistrados.get(i);
+            System.out.printf("► %d º %s  %.2f descargas\n",(i+1), libro.getTituloLibro(), libro.getNumeroDescargas());
+        }
 
     }
 }
