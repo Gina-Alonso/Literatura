@@ -67,12 +67,10 @@ public class LibrosC {
 
     @Override
     public String toString() {
-        return "LibrosC{" +
-                "id=" + id +
-                ", tituloLibro='" + tituloLibro + '\'' +
-                ", idioma=" + idioma +
-                ", numeroDescargas=" + numeroDescargas +
-                ", autor=" + autor.getNombre() +
-                '}';
+        return "\n•••••Libro•••••" +
+                "\n►Titulo: " + tituloLibro +
+                "\n►Idioma: " + idioma +
+                "\n►Numero de Descargas:" + numeroDescargas +
+                "\n►Autor: " + autor.getNombre();
     }
 }

@@ -72,11 +72,10 @@ public class AutorC {
 
     @Override
     public String toString() {
-        return "AutorC{" +
-                "anioNacimiento=" + anioNacimiento +
-                ", anioFallecimiento=" + anioFallecimiento +
-                ", nombre='" + nombre + '\'' +
-                ", libroDelAutor=" + libroDelAutor.getTituloLibro() +
-                '}';
+        return "\n•••••Autor•••••" +
+                "\n►Nombre: "+nombre+
+                "\n►Anio de Nacimiento: " + anioNacimiento +
+                "\n►Anio de Fallecimiento: " + anioFallecimiento +
+                "\n►LibroDelAutor: " + libroDelAutor.getTituloLibro();
     }
 }
