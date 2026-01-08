@@ -35,22 +35,47 @@ cd literalura
 ```
 ## 🖼️ Demostración de LiterAlura
 
-### 1. Pantalla del Menu
+### Pantalla del Menu
 ![Pantalla del Menu de LiterAlura](./src/img/literalura_menu.png)
+
 *Al ejecutar la aplicación, se muestra el menú principal*
 
-### 2. Búsqueda en Tiempo Real
-![Buscando libros en la API](./images/busqueda-api.gif)
-*Proceso de búsqueda y obtención desde Gutendex API*
+### 1. Buscar libro
+![Buscando libros en la API](./src/img/literalura_buscar_libro.png)
 
-### 3. Resultados y Almacenamiento
-![Libro encontrado y guardado](./images/resultado-guardado.png)
-*El libro se muestra y se almacena automáticamente en la BD*
+*Proceso de búsqueda y obtención desde Gutendex API el libro se almacena automáticamente en la BD*
 
-### 4. Consultas a la Base de Datos
-![Consultando libros registrados](./images/consulta-bd.png)
-*Listado completo de libros persistidos*
+### 2. Buscar libro por autor
+![Libro encontrado y guardado](./src/img/literalura_buscar_libroxautor.png)
 
-### 5. Diagrama de la Solución
-![Arquitectura de LiterAlura](./images/arquitectura.svg)
-*Diagrama de componentes y flujo de datos*
+*Proceso de busqueda del libro de un determinado autor desde la BD*
+
+### 3. Libros Registrados
+![Libro encontrado y guardado](./src/img/literalura_libros_registrados.png)
+
+*Listado completo de los libros persistidos*
+
+### 4. Libros Registrados
+![Consultando libros registrados](./src/img/literalura_autores_registrados.png)
+
+*Listado completo de autores persistidos*
+
+### 5. Autores vivos en determinado anio
+![Arquitectura de LiterAlura](./src/img/literalura_autores_vivos.png)
+
+*Consulta de los autores en la BD*
+
+### 6. Libros por idioma
+![Arquitectura de LiterAlura](./src/img/literalura_librosxidioma.png)
+
+*Consulta de libros por idioma*
+
+### 7. Estadisticas
+![Arquitectura de LiterAlura](./src/img/)
+
+*Estadisticas*
+
+### 8. Top 5 libros mas descargados
+![Arquitectura de LiterAlura](./src/img/)
+*Consulta de los 5 libros mas descargados*
+
