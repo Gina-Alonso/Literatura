@@ -35,8 +35,8 @@ cd literalura
 ```
 ## 🖼️ Demostración de LiterAlura
 
-### 1. Pantalla de Inicio
-![Pantalla de inicio de LiterAlura](./images/inicio.png)
+### 1. Pantalla del Menu
+![Pantalla del Menu de LiterAlura](./src/img/literalura_menu.png)
 *Al ejecutar la aplicación, se muestra el menú principal*
 
 ### 2. Búsqueda en Tiempo Real
